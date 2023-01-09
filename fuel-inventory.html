@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fuel Inventory</title>
+  <link rel="stylesheet" href="fuel-inventory.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sales-data.html">Sales Data</a></li>
+      <li><a href="fuel-inventory.html">Fuel Inventory</a></li>
+      <li><a href="employee-management.html">Employee Management</a></li>
+    </ul>
+  </nav>
+</body>
+<section>
+    <h2>Fuel Inventory</h2>
+    <form>
+      <label for="fuel-id">Fuel ID:</label>
+      <input type="number" id="fuel-id" name="fuel-id">
+      <br>
+      <label for="fuel-type">Fuel Type:</label>
+      <input type="text" id="fuel-type" name="fuel-type">
+      <br>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="0">
+      <br>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" min="0">
+      <br>
+      <button type="submit">Add</button>
+    </form>
+    <br>
+    <table>
+      <tr>
+        <th>Fuel ID</th>
+        <th>Fuel Type</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>901</td>
+        <td>Petrol</td>
+        <td>10000 liters</td>
+        <td>130/liter</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>902</td>
+        <td>Diesel</td>
+        <td>10000 liters</td>
+        <td>109/liter</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    </table>
+  </section>
+</html>

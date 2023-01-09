@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Petrol Pump Management System - Sales Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="get-sales-data.php"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1>Petrol Pump Management System</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales-data.html">Sales Data</a></li>
+        <li><a href="fuel-inventory.html">Fuel Inventory</a></li>
+        <li><a href="employee-management.html">Employee Management</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Sales Data</h2>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Fuel Type</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Payment Method</th>
+          </tr>
+        </table>
+      </section>
+        
+          <script>
+    fetch('/get-sales-data.php')
+  .then(response => response.json())
+  .then(data => {
+    // Get the sales data table
+    const table = document.querySelector('table');
+
+    // Loop through the sales data and add a row for each sale
+    data.forEach(sale => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${sale.id}</td>
+        <td>${sale.fuelType}</td>
+        <td>${sale.quantity}</td>
+        <td>${sale.price}</td>
+        <td>${sale.paymentMethod}</td>
+      `;
+      table.appendChild(row);
+    });
+  });
+
+          </script>
+          
+        
+        </table>
+      </section>
+    </main>     
+    <footer>
+      <p>FUEL IS AS IMPORTANT AS RICE AND COFFEE.</p>
+    </footer>
+  </body>
+</html>

@@ -1,10 +1,10 @@
 fetch('/get-sales-data.php')
   .then(response => response.json())
   .then(data => {
-    // Get the sales data table
+    
     const table = document.querySelector('table');
 
-    // Loop through the sales data and add a row for each sale
+   
     data.forEach(sale => {
       const row = document.createElement('tr');
       row.innerHTML = `
